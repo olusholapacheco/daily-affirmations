@@ -1,8 +1,11 @@
 import random
 
+# let's personalize it 
+name = input("What's your name? ")
+
 # random daily affirmations - We all need a little pick me up, life is crazy enough
 
-[
+affirmations = [
     "Today is a fresh start.",
     "I am enough just as I am.",
     "I believe in my abilities and skills.",
@@ -208,6 +211,14 @@ import random
     "I choose relationships that bring me joy",
     "I am grateful for the love in my life",
     "I give love freely without expectation",
-    "My heart is filled with gratitude and love"
-    
+    "My heart is filled with gratitude and love",
+    "I matter in the grand scheme of things, I am part of a beautiful puzzle that makes life beautiful"
+
 ]
+
+# Picking a random affirmation with every refresh
+todays_affirmation = random.choice(affirmations)
+
+# Display the personalized affirmation
+print(f"🌟 {name}, Your Daily Affirmation 🌟")
+print(todays_affirmation)
