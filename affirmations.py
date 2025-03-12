@@ -1,4 +1,5 @@
 import random
+import datetime
 
 # let's personalize it 
 name = input("What's your name? ")
@@ -216,9 +217,20 @@ affirmations = [
 
 ]
 
+# Timestamp to help with correct salutation 
+current_hour = datetime.datetime.now().hour
+
+# Determine salutation based on time
+if current_hour < 12:
+    salutation = "Good morning"
+elif 12 <= current_hour < 17:
+    salutation = "Good afternoon"
+else:
+    salutation = "Good evening"
+
 # Picking a random affirmation with every refresh
 todays_affirmation = random.choice(affirmations)
 
 # Display the personalized affirmation
-print(f"🌟 {name}, Your Daily Affirmation 🌟")
+print(f"🌟 {salutation}, {name}! Here’s your daily affirmation 🌟")
 print(todays_affirmation)
