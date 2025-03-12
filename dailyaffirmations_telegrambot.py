@@ -1,11 +1,12 @@
 import logging
+import os
 import random
 from telegram import Update
 from telegram.ext import Application, CommandHandler, CallbackContext
 
 # Telegram Bot Authorization Token 
 
-TOKEN = "TELEGRAM_BOT_TOKEN"
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 
 affirmations = [
